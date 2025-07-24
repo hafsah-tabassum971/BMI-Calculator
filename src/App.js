@@ -51,7 +51,7 @@ function App() {
     <div className="app">
       <div className="container">
         <div className="content-wrapper">
-          <h2 className="center">BMI Calculator</h2>
+          <h2 className="center" style={{color: "#525834"}}>BMI Calculator</h2>
           <form onSubmit={calcBmi}>
             {!submitted && (
               <>
