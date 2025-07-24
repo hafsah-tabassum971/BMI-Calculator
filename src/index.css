@@ -14,13 +14,33 @@ body, html {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh; /* Full viewport height */
+  height: 100vh;
   width: 100%;
   overflow: hidden;
-  background: url('./assets/img.png') no-repeat center center;
+
+  /* Improved background image handling */
+  background-image: url('./assets/img.png');
+  background-repeat: no-repeat;
+  background-position: center;
   background-size: cover;
 
+  /* Optional: add a fallback background color */
+  background-color: #eef1e0;
+
+  /* Smooth fade-in effect for the background image */
+  animation: fadeInBg 1.2s ease-in-out;
 }
+
+/* Optional fade-in animation */
+@keyframes fadeInBg {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 
 .container {
   background: rgba(255, 255, 255, 0.95); /* White with slight transparency */
